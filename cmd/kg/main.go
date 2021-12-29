@@ -59,6 +59,7 @@ var (
 	}, ", ")
 	availableCompatibilities = strings.Join([]string{
 		"flannel",
+		"kube-router",
 	}, ", ")
 	availableEncapsulations = strings.Join([]string{
 		string(encapsulation.Never),
@@ -212,6 +213,8 @@ func runRoot(_ *cobra.Command, _ []string) error {
 	switch compatibility {
 	case "flannel":
 		enc = encapsulation.NewFlannel(e)
+	case "kube-router":
+		enc = encapsulation.NewKubeRouter(e)
 	default:
 		enc = encapsulation.NewIPIP(e)
 	}
