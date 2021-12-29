@@ -21,7 +21,7 @@ Usage of bin//linux/amd64/kg:
       --clean-up-interface        Should Kilo delete its interface when it shuts down?
       --cni                       Should Kilo manage the node's CNI configuration? (default true)
       --cni-path string           Path to CNI config. (default "/etc/cni/net.d/10-kilo.conflist")
-      --compatibility string      Should Kilo run in compatibility mode? Possible values: flannel
+      --compatibility string      Should Kilo run in compatibility mode? Possible values: flannel, kube-router
       --create-interface          Should kilo create an interface on startup? (default true)
       --encapsulate string        When should Kilo encapsulate packets within a location? Possible values: never, crosssubnet, always (default "always")
       --hostname string           Hostname of the node on which this process is running.
